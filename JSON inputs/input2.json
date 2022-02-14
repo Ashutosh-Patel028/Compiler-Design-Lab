@@ -1,0 +1,40 @@
+{
+    "states": [
+        "A",
+        "B"
+    ],
+    "letters": [
+        "0",
+        "1"
+    ],
+    "transition_function": [
+        [
+            "A",
+            "0",
+            "B"
+        ],
+        [
+            "B",
+            "1",
+            "A"
+        ]
+    ],
+    "transition_matrix": [
+      [
+          "A",
+          "0",
+          "B"
+      ],
+      [
+          "B",
+          "1",
+          "A"
+      ]
+    ],
+    "start_states": [
+        "A"
+    ],
+    "final_states": [
+        "B"
+    ]
+}

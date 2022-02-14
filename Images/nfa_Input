@@ -1,0 +1,18 @@
+digraph {
+	rankdir=LR
+	node [shape=circle]
+	A
+	node [shape=circle]
+	B
+	node [color=blue shape=doublecircle]
+	C
+	node [shape=none]
+	""
+	"" -> A [arrowsize=2 color=red]
+	A -> A [label=0]
+	A -> B [label="ε"]
+	B -> B [label=1]
+	B -> C [label="ε"]
+	C -> C [label=0]
+	C -> C [label=1]
+}

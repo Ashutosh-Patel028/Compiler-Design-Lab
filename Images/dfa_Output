@@ -1,0 +1,18 @@
+digraph {
+	rankdir=LR
+	node [color=blue shape=doublecircle]
+	ABC
+	node [shape=none]
+	""
+	"" -> ABC [arrowsize=2 color=red]
+	ABC -> ABC [label=0]
+	node [color=blue shape=doublecircle]
+	BC
+	ABC -> BC [label=1]
+	node [color=blue shape=doublecircle]
+	C
+	BC -> C [label=0]
+	BC -> BC [label=1]
+	C -> C [label=0]
+	C -> C [label=1]
+}

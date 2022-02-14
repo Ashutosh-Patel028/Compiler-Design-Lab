@@ -1,0 +1,13 @@
+{
+    "noOfStates":4,
+    "arrayStates":["A", "B", "C", "D"],
+    "noOfAlphabets":3,
+    "arrayAlphabets":["a", "b", "c"],
+    "startState":"A",
+    "noOfFinalStates":1,
+    "arrayFinalStates":["D"],
+    "noOfTransitions":7,
+    "arrayOfTransitions":[["A", "a", "A"], ["A", "e", "B"], ["B", "b", "B"],
+    ["A", "e", "C"], ["C", "c", "C"], ["B", "b", "D"],
+    ["C", "c", "D"]]
+}

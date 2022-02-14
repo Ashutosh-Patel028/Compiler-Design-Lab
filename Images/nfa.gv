@@ -1,0 +1,18 @@
+digraph nondeterministic_finite_state_machine {
+	rankdir=LR
+	node [color=blue shape=doublecircle]
+	s8
+	node [color=black shape=circle]
+	s1 -> s2 [label="ε"]
+	s1 -> s8 [label="ε"]
+	s7 -> s8 [label="ε"]
+	s7 -> s2 [label="ε"]
+	s2 -> s3 [label="ε"]
+	s2 -> s5 [label="ε"]
+	s4 -> s7 [label="ε"]
+	s6 -> s7 [label="ε"]
+	s3 -> s4 [label=a]
+	s5 -> s6 [label=b]
+	node [shape=point]
+	"" -> s1 [arrowsize=2 color=red]
+}
