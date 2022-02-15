@@ -15,7 +15,7 @@ gram = {
 # 	"T":["T,S","S"]
 # }
 
-print("\n-------Predictive Parsing Table-------------\n")
+print("\n<---------Predictive Parsing Table---------------->\n")
 def removeDirectLR(gramA, A):
 	"""gramA is dictonary"""
 	temp = gramA[A]
