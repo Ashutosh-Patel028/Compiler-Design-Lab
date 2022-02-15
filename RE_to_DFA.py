@@ -1,4 +1,5 @@
 
+from cProfile import label
 from collections import defaultdict
 from graphviz import Digraph
 
@@ -98,15 +99,8 @@ class FA:
         return trstates
 
     def display(self, fname, pname):
-        # print(self.states)
-        # print(self.startstate)
-        # print(self.transitions)
-        # print(self.finalstates)
-        # print(self.symbol)
-        # print(self.__annotations__)
-        ########################
         fa = Digraph(pname, filename = fname, format = 'png',directory=r"C:\Users\ashut\Desktop\Compiler Design Lab\Images")
-        fa.attr(rankdir='LR')  #all nodes are in horizontal order(Left to Right)
+        fa.attr(rankdir='LR')  #all nodes are in horizontal order(Left -> Right)
 
         fa.attr('node', shape = 'doublecircle',color='blue')
         for fst in self.finalstates:
@@ -122,7 +116,8 @@ class FA:
 
         fa.attr('node', shape = 'point')
         fa.edge('', 's' + str(self.startstate),arrowsize='2',color='red')
-
+        fa.attr(label=r'\n\n'+pname)
+        fa.attr(fontsize='20')
         fa.view()
 
 class Regex2NFA: #Using Thompson's Construction algorithm
@@ -400,27 +395,23 @@ class NFA2DFA:
 
 if __name__ == '__main__':
 
-    # using example
+    # Taking User Input:  eg:(a|b)*abb
     regex = input('Please input the regex: ')
     a = Regex2NFA(regex)
-#     print(a)
     a.displayNFA()
-    # print(a.nfa.symbol)
-    # c=a.nfa
-    # print(c.states)
 
-    # b = NFA2DFA(a.nfa)
-    # b.displayDFA()
-    # b.minimise()
-    # b.displayminDFA()
+    b = NFA2DFA(a.nfa)
+    b.displayDFA()
+    b.minimise()
+    b.displayminDFA()
 
-# #String recognition of DFA
-#     while True:
-#         try:
-#             s = input('Please input a word to analysis (take @ as ε): ')
-#             if b.Analysis(s):
-#                 print('Accepted')
-#             else:
-#                 print('Unaccepted')
-#         except EOFError:
-#             break
+    #String recognition of DFA
+    while True:
+        try:
+            s = input('Please input a word to analysis (take @ as ε): ')
+            if b.Analysis(s):
+                print('Accepted')
+            else:
+                print('Unaccepted')
+        except EOFError:
+            break

@@ -1,18 +1,20 @@
 digraph {
 	rankdir=LR
-	node [color=blue shape=doublecircle]
-	ABC
+	node [shape=circle]
+	q0
 	node [shape=none]
 	""
-	"" -> ABC [arrowsize=2 color=red]
-	ABC -> ABC [label=0]
+	"" -> q0 [arrowsize=2 color=red]
+	q0 -> q0 [label=a]
+	node [shape=circle]
+	q0q1
+	q0 -> q0q1 [label=b]
+	q0q1 -> q0 [label=a]
 	node [color=blue shape=doublecircle]
-	BC
-	ABC -> BC [label=1]
-	node [color=blue shape=doublecircle]
-	C
-	BC -> C [label=0]
-	BC -> BC [label=1]
-	C -> C [label=0]
-	C -> C [label=1]
+	q0q1q2
+	q0q1 -> q0q1q2 [label=b]
+	q0q1q2 -> q0 [label=a]
+	q0q1q2 -> q0q1q2 [label=b]
+	label="\n\nDFA"
+	fontsize=20
 }

@@ -1,5 +1,5 @@
 #Finite Automata(DFA) to Regular Expression(RE) Conversion Program
-#It converts normal dfa as well as dfa with multiple states
+#It converts normal dfa as well as dfa with multiple final states
 from turtle import color
 from graphviz import Digraph
 import copy
