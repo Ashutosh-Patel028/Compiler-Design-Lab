@@ -62,10 +62,5 @@ if __name__=="__main__":
     print(predictive_parsing(sentence=string,parsingtable=parsingtable,terminals=terminals,start_state=start_state))
     
     
-    
-    
-    
-    
-    
     #Another Example done in class:-
     # print(predictive_parsing(sentence="c.c.c.c.d.d.$",parsingtable={"S" : {"c":"C.C","d":"C.C"},"C":{"c":"c.C","d":"d"}},terminals=["c,d"],start_state="S"))

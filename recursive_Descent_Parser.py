@@ -134,6 +134,37 @@ def PrintGrammer(result):   #Printing Resultant Grammer after elimination of Lef
 			i+=1
 		print()
 
+def printProcedure(gram,non_terminals):   #printing recursive procedure
+	print("\n*******RECURSIVE PROCEDURE********\n")
+	flag=False
+	for k in gram:
+		print("<--------------------------------->")
+		print(f"procedure: {k}()")
+		print("Begin:")
+		for ch in gram[k]:
+			if(ch not in non_terminals and ch !='e'):
+				if(flag):
+					print("End ")
+                
+				flag=True
+                
+				print(f"if an input symbol '{ch}' then,")
+                
+				print("Begin: ")
+            
+			elif(ch in non_terminals):
+				print(f"{ch}()")
+			elif(ch == gram[k][-1]):
+				print("End")
+				print('Else')
+				if(ch=='e'):
+					print("Null character")
+				else:
+					print(f"if an input symbol '{ch}' then")
+					print("Begin\nEnd")
+		print("End")
+		print("<--------------------------------->")
+
 def DrawTransitionDiagram(gram,non_terminals):
     g = Digraph(format="png")
     g.attr(rankdir='LR') 
@@ -181,7 +212,6 @@ def DrawTransitionDiagram(gram,non_terminals):
 
 
 result = rem(gram)  #Output Grammer,after removal of left recursion
-print(result)
 PrintGrammer(result) #printing resultant Grammer to Console
 
 non_terminals=[key for key in result] #non-terminals from Grammer after Removing Left Recursion
@@ -198,13 +228,9 @@ for key,prod in result.items():
         i+=1
     gram1[key]=lst
 
-print(gram1)
-# DrawTransitionDiagram(gram1,non_terminals) #Drawing grammer transitions
+printProcedure(gram1,non_terminals)  #printing recursive Procedure
 
-
-
-
-
+DrawTransitionDiagram(gram1,non_terminals) #Drawing grammer transitions
 
 
 

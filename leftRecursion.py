@@ -1,21 +1,27 @@
 #Program to Eliminate Left Recursion from Grammer
+# <---------------------INPUT GRAMMER------------------->
+gram = {
+    "E":["E+T","T"],
+    "T":["T*F","F"],
+    "F":["(E)","id"]
+}
 
 # gram = {
-#     "E":["E+T","T"],
-#     "T":["T*F","F"],
-#     "F":["(E)","i"]
+#     "S":["S+S","S-S","a","b"]
 # }
-
-gram = {
-    "S":["S+S","S-S","a","b"]
-}
 
 # gram = {
 #     "A":["Ac","Sd","e"]
 # }
 
+# gram = {
+# 	"S":["(L)","a"],
+# 	"L":["L,S","S"]
+# }
 
-def removeDirectLR(gramA, A):
+# <-------------------INPUT ENDS------------------------->
+
+def removeDirectLR(gramA, A):    # Removes Direct Left Recursion
 	temp = gramA[A]
 	tempCr = []
 	tempInCr = []
@@ -30,7 +36,7 @@ def removeDirectLR(gramA, A):
 	return gramA
 
 
-def checkForIndirect(gramA, a, ai):
+def checkForIndirect(gramA, a, ai): #checks for indirect Left Recursion
 	if ai not in gramA:
 		return False
 	if a == ai:
@@ -114,21 +120,22 @@ def rem(gram):
 		op[revconv[i]] = l
 
 	return op
-result = rem(gram)  #a dictionary
 
-# for i in result:
-#     print(f'{i}->{result[i]}')
+def PrintGrammer(result):  #Method to print output resultant grammer in proper format
+	for head,prod in result.items():
+		print(head,"->",end=" ")
+		i=0
+		length=len(prod)
+		while i<length:
+			val=prod[i]
+			for j in val:
+				print(j,end="")
+			if i+1<length:
+				print(" | " ,end="")
+			i+=1
+		print()
+
+result = rem(gram) # resultant Grammer after removal of left Recursion
 
 #Printing Result after elimination of Left Recursion
-for head,prod in result.items():
-    print(head,"->",end=" ")
-    i=0
-    length=len(prod)
-    while i<length:
-        val=prod[i]
-        for j in val:
-            print(j,end="")
-        if i+1<length:
-            print(" | " ,end="")
-        i+=1
-    print()
+PrintGrammer(result)

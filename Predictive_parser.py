@@ -1,6 +1,6 @@
 #Program to implement Predictive Parsing Algorithm
 
-#Grammer Input
+#<-------------------------Grammer Input---------------------------->
 # gram = {
 # 	"E":["E+T","T"],
 # 	"T":["T*F","F"],
@@ -14,6 +14,7 @@ gram = {
 # 	"S":["a","⬆","(T)"],
 # 	"T":["T,S","S"]
 # }
+# <-------------------------INPUT ENDS--------------------------------->
 
 print("\n<---------Predictive Parsing Table---------------->\n")
 def removeDirectLR(gramA, A):
