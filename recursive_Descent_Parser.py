@@ -231,17 +231,3 @@ for key,prod in result.items():
 printProcedure(gram1,non_terminals)  #printing recursive Procedure
 
 DrawTransitionDiagram(gram1,non_terminals) #Drawing grammer transitions
-
-
-
-#writing recursive procedure
-# gram1={"T":["F","A'"]}
-# for key,prod in gram1.items():
-#     print("Procedure: "+key+"()")
-#     print("Begin:\t")
-#     for str in prod:
-#         if(str in non_terminals):
-#             print("\t"+str+"()")
-#         elif(str not in non_terminals):
-#             print("if an input symbol '{str}' then :\n\t\tBegin:\n")
-

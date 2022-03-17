@@ -27,6 +27,8 @@ alphabetset=["A'","B'","C'","D'","E'","F'","G'","H'","I'","J'","K'","L'","M'","N
 s= "A->aB|aC" #input-1
 # s= "S->iEtS|iEtSeS|a"  #input-2
 
+print("Given grammer is: ",s)
+
 while(True):
     rules=[]
     common=[]

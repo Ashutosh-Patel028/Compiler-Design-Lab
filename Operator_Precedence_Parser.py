@@ -6,7 +6,7 @@ def printTable(terminals):
     print("Terminals = ",terminals)
     l=list("abcdefghijklmnopqrstuvwxyz")
     o=list('(/*%+-)')
-    p=list('(/*%+-)')
+    p=list('(/*%+-)') 
     precedence=np.empty([len(terminals)+1,len(terminals)+1],dtype=object,order="C")  #here precedence Precedence-2d-array
     precedence[0][0]="TERMINALS"
     for j in range(1,len(terminals)+1):

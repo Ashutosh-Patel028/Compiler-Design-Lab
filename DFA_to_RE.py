@@ -5,6 +5,7 @@ from graphviz import Digraph
 import copy
 
 #<------------------DFA inputs------------------>
+
 dfa = {"states": ["Q1", "Q2","Q3","Q4","Q5"], 
        "letters": ["a", "b","c","d"],
        "transition_function": [["Q1", "a", "Q2"], ["Q2", "b", "Q4"], ["Q2", "c", "Q3"], ["Q2", "d", "Q5"]],
