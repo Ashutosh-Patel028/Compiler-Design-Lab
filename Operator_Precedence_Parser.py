@@ -1,5 +1,6 @@
-from prettytable import PrettyTable
 import numpy as np
+from prettytable import PrettyTable
+
 
 def printTable(terminals): 
     terminals.append('$')   #terminals is a list of Terminals

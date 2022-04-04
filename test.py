@@ -103,5 +103,3 @@ print("Given grammer is: ")
 # [print(i) for i in grammer]
 
 
-for i in grammer:
-	removeLeftFactoring(i)
