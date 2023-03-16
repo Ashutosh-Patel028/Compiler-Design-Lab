@@ -53,8 +53,8 @@ def threeAddressCode(expression,p,k):
         op,l,r=findop(tac['t'+str(k)]) 
         st['t'+str(k)]={op:{'l':l,'r':r}} 
         k+=1
-  else:
-    p-=1
+    else:
+      p-=1
   return k 
 
 def threeAddressCodeB(expression,k): 
