@@ -76,3 +76,9 @@ k=threeAddressCode(expression,p,k)
 st['t'+str(k+1)]={'=':{'l':spl[0],'r':'t'+str(k)}} 
 for i,j in st.items(): 
   print(i,j)
+
+#input : c=a+b*60
+#output: 
+# t0 {'*': {'l': 'b', 'r': '60'}}
+# t1 {'+': {'l': 'a', 'r': 't0'}}
+# t2 {'=': {'l': 'c', 'r': 't1'}}
