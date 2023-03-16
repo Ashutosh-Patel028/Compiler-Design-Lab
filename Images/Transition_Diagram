@@ -6,8 +6,16 @@ digraph {
 		q0
 		node [shape=circle]
 		q1
-		node [shape=circle]
+		node [color=blue shape=doublecircle]
 		q2
+		node [shape=point]
+		cluster_0
+		cluster_0 -> q0 [arrowsize=2 color=red]
+		q0 -> q1 [label=T]
+		q1 -> q2 [label="E'"]
+	}
+	subgraph cluster_1 {
+		rank=same
 		node [shape=circle]
 		q3
 		node [shape=circle]
@@ -15,27 +23,63 @@ digraph {
 		node [color=blue shape=doublecircle]
 		q5
 		node [shape=point]
-		cluster_0
-		cluster_0 -> q0 [arrowsize=2 color=red]
-		q0 -> q1 [label=S]
-		q1 -> q2 [label=d]
-		q2 -> q3 [label="A'"]
-		q3 -> q4 [label=e]
-		q4 -> q5 [label="A'"]
+		cluster_1
+		cluster_1 -> q3 [arrowsize=2 color=red]
+		q3 -> q4 [label=F]
+		q4 -> q5 [label="T'"]
 	}
-	subgraph cluster_1 {
+	subgraph cluster_2 {
 		rank=same
 		node [shape=circle]
 		q6
 		node [shape=circle]
 		q7
-		node [color=blue shape=doublecircle]
+		node [shape=circle]
 		q8
+		node [color=blue shape=doublecircle]
+		q9
 		node [shape=point]
-		cluster_1
-		cluster_1 -> q6 [arrowsize=2 color=red]
-		q6 -> q7 [label=c]
-		q7 -> q8 [label="A'"]
-		q6 -> q8 [label=e]
+		cluster_2
+		cluster_2 -> q6 [arrowsize=2 color=red]
+		q6 -> q7 [label="("]
+		q7 -> q8 [label=E]
+		q8 -> q9 [label=")"]
+		q6 -> q9 [label=i]
+	}
+	subgraph cluster_3 {
+		rank=same
+		node [shape=circle]
+		q10
+		node [shape=circle]
+		q11
+		node [shape=circle]
+		q12
+		node [color=blue shape=doublecircle]
+		q13
+		node [shape=point]
+		cluster_3
+		cluster_3 -> q10 [arrowsize=2 color=red]
+		q10 -> q11 [label="+"]
+		q11 -> q12 [label=T]
+		q12 -> q13 [label="E'"]
+		q10 -> q13 [label=e]
+	}
+	subgraph cluster_4 {
+		rank=same
+		node [shape=circle]
+		q14
+		node [shape=circle]
+		q15
+		node [shape=circle]
+		q16
+		node [color=blue shape=doublecircle]
+		q17
+		node [shape=point]
+		cluster_4
+		cluster_4 -> q14 [arrowsize=2 color=red]
+		q14 -> q15 [label="*"]
+		q15 -> q16 [label=F]
+		q16 -> q17 [label="T'"]
+		q14 -> q17 [label=e]
 	}
 }

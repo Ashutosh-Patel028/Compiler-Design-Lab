@@ -2,7 +2,6 @@
 
 import copy
 
-
 def grammarAugmentation(rules, nonterm_userdef,
 						start_symbol):
 
@@ -496,4 +495,4 @@ diction = {}
 # call createParseTable function
 createParseTable(statesDict, stateMap,
 				term_userdef,
-				nonterm_userdef)
+				nonterm_userdef)	

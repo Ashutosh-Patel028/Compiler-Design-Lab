@@ -18,3 +18,4 @@ for word in user:
             tokens.append(["INTEGER/CONSTANT", word])
 for i in tokens:
     print(i)
+    

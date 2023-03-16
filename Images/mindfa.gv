@@ -3,14 +3,14 @@ digraph min_deterministic_finite_state_machine {
 	node [color=blue shape=doublecircle]
 	s4
 	node [color=black shape=circle]
-	s1 -> s1 [label=b]
 	s1 -> s2 [label=a]
-	s2 -> s3 [label=b]
+	s1 -> s1 [label=b]
 	s2 -> s2 [label=a]
-	s3 -> s4 [label=b]
+	s2 -> s3 [label=b]
 	s3 -> s2 [label=a]
-	s4 -> s1 [label=b]
+	s3 -> s4 [label=b]
 	s4 -> s2 [label=a]
+	s4 -> s1 [label=b]
 	node [shape=point]
 	"" -> s1 [arrowsize=2 color=red]
 	label="\n\nmin_deterministic_finite_state_machine"

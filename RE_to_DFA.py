@@ -406,12 +406,12 @@ if __name__ == '__main__':
     b.displayminDFA()
 
     #String recognition of DFA
-    while True:
-        try:
-            s = input('Please input a word to analysis (take @ as ε): ')
-            if b.Analysis(s):
-                print('Accepted')
-            else:
-                print('Unaccepted')
-        except EOFError:
-            break
+    # while True:
+    #     try:
+    #         s = input('Please input a word to analysis (take @ as ε): ')
+    #         if b.Analysis(s):
+    #             print('Accepted')
+    #         else:
+    #             print('Unaccepted')
+    #     except EOFError:
+    #         break

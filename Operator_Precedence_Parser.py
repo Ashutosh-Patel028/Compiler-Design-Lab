@@ -131,3 +131,40 @@ if(t):
         print("\n**String is not accepted**\n")
 else:
     print("\n**Grammar is not accepted**\n")
+
+
+
+
+'''
+I/O example for grammer E->E+E|E*E|id and id+id*id
+
+Enter the number of Productions..
+3
+Enter Prodiction-> 1  (For null production please enter any special symbol or whitespace...)
+
+E->E+E
+Enter Prodiction-> 2  (For null production please enter any special symbol or whitespace...)
+
+E->E*E
+Enter Prodiction-> 3  (For null production please enter any special symbol or whitespace...)
+
+E->i
+
+**Grammar is accepted**
+
+Enter all the terminals present in grammer (in small case)
++*i
+Terminals =  ['+', '*', 'i', '$']
++-----------+---+---+---+---+
+| TERMINALS | + | * | i | $ |
++-----------+---+---+---+---+
+|     +     |   | < | < | > |
+|     *     | > |   | < | > |
+|     i     | > | > |   | > |
+|     $     | < | < | < |   |
++-----------+---+---+---+---+
+Enter the string want to be checked(non-terminals should be in cursive(small) letter...
+i+i*i
+
+**String is accepted**
+'''

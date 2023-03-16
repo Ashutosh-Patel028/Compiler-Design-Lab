@@ -101,5 +101,3 @@ grammer=["A->aB|aC","S->iEtS|iEtSeS|a"]
 print("Given grammer is: ")
 
 # [print(i) for i in grammer]
-
-
