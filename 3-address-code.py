@@ -1,9 +1,9 @@
 #convert given expression to 3-address code
 
-OPERATORS = set(['+', '-', '*', '/', '(', ')', '^']) 
-PRIORITY = {1:'-', 2:'+',3:'*', 4:'/'} 
+OPERATORS = set(['+', '-', '*', '/', '(', ')', '^'])
+PRIORITY = {1:'-', 2:'+',3:'*', 4:'/'}
 k=0
-tac={} 
+tac={}
 p=4
 def preaft(exp,op): 
   ind=exp.index(op) 

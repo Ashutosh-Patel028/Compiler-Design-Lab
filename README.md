@@ -6,17 +6,17 @@ This repository contains all the experiments for **COMPILER DESIGN** course .
 ---
 
 ## List Of Experiments:
-1. Symbol Table Generation
-2. Lexical Parser for source Expression
-3. Lexical Parser for source Program
-4. NFA to DFA conversion
-5. epsilon-NFA to DFA conversion
-6. Regular Expression(RE) to DFA
-7. Finite Automata(DFA) to RE(Regular Expression)
-8. Top-Down Parsers
+- [x] Symbol Table Generation
+- [x] Lexical Parser for source Expression
+- [x] Lexical Parser for source Program
+- [x] NFA to DFA conversion
+- [x] epsilon-NFA to DFA conversion
+- [x] Regular Expression(RE) to DFA
+- [x] Finite Automata(DFA) to RE(Regular Expression)
+- [x] Top-Down Parsers
    * Recursive Descent Parser 
    * Predictive Parser **(LL1)**
-9. Bottom-Up Parsers
+- [x] Bottom-Up Parsers
    * Shift Reduce Parser
    * Operator Precedence Parser
    * LR Parsers
