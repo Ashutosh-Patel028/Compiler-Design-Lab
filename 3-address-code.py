@@ -5,6 +5,7 @@ PRIORITY = {1:'-', 2:'+',3:'*', 4:'/'}
 k=0
 tac={}
 p=4
+
 def preaft(exp,op): 
   ind=exp.index(op) 
   pre=aft=0
@@ -15,7 +16,8 @@ def preaft(exp,op):
     if(exp[i] in OPERATORS): 
       aft=i 
       break
-  return pre,aft 
+  return pre,aft
+
 def threeAddressCode(expression,p,k): 
   while p>=1: 
     if(PRIORITY[p] in expression): 
@@ -38,6 +40,7 @@ def threeAddressCode(expression,p,k):
         k+=1
     else: 
      p-=1
+
 def threeAddressCodeB(expression,k): 
   if('('in expression ): 
     i=expression.index('(') 
@@ -47,6 +50,7 @@ def threeAddressCodeB(expression,k):
     return expression,k 
   else: 
     return expression,k 
+
 expression = input('Enter expression: ') 
 expression,k=threeAddressCodeB(expression,k) 
 threeAddressCode(expression,p,k) 
